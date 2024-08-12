@@ -1,0 +1,51 @@
+Versão em Português
+-------------------
+
+Esta obra está licenciada sob a Licença Creative Commons Atribuição-NãoComercial 4.0 Internacional. 
+Para ver uma cópia desta licença, visite http://creativecommons.org/licenses/by-nc/4.0/ ou envie uma carta para 
+Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+Informações sobre o Projeto
+----------------------------
+
+Esta API faz parte de um projeto educacional para um projeto de conclusão de curso de pós-graduação em Desenvolvimento Full Stack da aluna Andrezza Almeida. O projeto visa promover o aleitamento materno e a doação de leite humano. O projeto não é comercial.
+
+Fontes de Dados
+---------------
+
+- **rBLH Fiocruz**: As informações sobre as localizações dos Bancos de Leite Humano foram retiradas do site da rBLH Fiocruz, utilizado sob a Política de Acesso Aberto ao Conhecimento, que permite o uso não comercial, desde que sejam atribuídos os devidos créditos aos autores.
+  - Website: https://rblh.fiocruz.br/localizacao-dos-blhs
+
+Para qualquer uso ou redistribuição, você deve deixar claro para outros os termos de licenciamento desta obra.
+
+Contato da autora:
+- Nome: Andrezza Almeida
+- Website: https://caixinhacriativa.com.br
+- Email: contato@caixinhacriativa.com.br ou dezzasalmeida@gmail.com
+
+-----------------------------------------------------------------------------
+
+English Version
+---------------
+
+This work is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License. 
+To view a copy of this license, visit http://creativecommons.org/licenses/by-nc/4.0/ or send a letter to 
+Creative Commons, PO Box 1866, Mountain View, CA 94042, USA.
+
+Project Information
+-------------------
+
+This API is part of an educational project for a postgraduate final project in Full Stack Development by student Andrezza Almeida. The project aims to promote breastfeeding and human milk donation. The project is non-commercial.
+
+Data Sources
+------------
+
+- **rBLH Fiocruz**: The information on the locations of Human Milk Banks was sourced from the rBLH Fiocruz website, used under the Open Access Knowledge Policy, which permits non-commercial use, provided that appropriate credit is given to the authors.
+  - Website: https://rblh.fiocruz.br/localizacao-dos-blhs
+
+For any use or redistribution, you must make clear to others the license terms of this work.
+
+Contact the author at:
+- Name: Andrezza Almeida
+- Website: https://caixinhacriativa.com.br
+- Email: contato@caixinhacriativa.com.br or dezzasalmeida@gmail.com
