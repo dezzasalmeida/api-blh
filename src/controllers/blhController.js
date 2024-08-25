@@ -4,7 +4,7 @@ class BLHController {
   async getAll(req, res, next) {
     try {
       const { page = 1, limit = 9 } = req.query;
-      const blhs = await BLHService.getAllBLHs(page, limit);
+      const blhs = await BLHService.getAllBLHs(parseInt(page), parseInt(limit));
       res.json(blhs);
     } catch (error) {
       next(error);

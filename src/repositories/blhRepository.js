@@ -32,6 +32,26 @@ const regionMapping = {
 };
 
 class BLHRepository {
+
+  async getPaginated(page = 1, limit = 9) {
+    const offset = (page - 1) * limit;
+
+    const { rows, count } = await BLH.findAndCountAll({
+      limit: limit,
+      offset: offset,
+    });
+
+    return {
+      data: rows,
+      pagination: {
+        found_posts: count,
+        max_num_pages: Math.ceil(count / limit),
+        page: page,
+        limit: limit,
+      },
+    };
+  }
+
   async getAll(offset = 0, limit = 9) {
     return await BLH.findAll({ offset, limit });
   }

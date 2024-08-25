@@ -3,8 +3,7 @@ const BLHRepository = require('../repositories/blhRepository');
 class BLHService {
   async getAllBLHs(page = 1, limit = 9) {
     try {
-      const offset = (page - 1) * limit;
-      return await BLHRepository.getAll(offset, limit);
+      return await BLHRepository.getPaginated(page, limit);
     } catch (error) {
       throw new Error('Erro ao buscar todos os BLHs');
     }
