@@ -32,28 +32,37 @@ const regionMapping = {
 };
 
 class BLHRepository {
-  async getAll() {
-    return await BLH.findAll();
+  async getAll(offset = 0, limit = 9) {
+    return await BLH.findAll({ offset, limit });
   }
 
-  async findByRegion(region) {
+  async findByRegion(region, offset = 0, limit = 9) {
     const statesInRegion = Object.keys(regionMapping).filter(
       state => regionMapping[state].toLowerCase() === region.toLowerCase()
     );
 
     return await BLH.findAll({
-      where: { state: { [Op.in]: statesInRegion } } });
+      where: { state: { [Op.in]: statesInRegion } },
+      offset,
+      limit
+    });
   }
 
-
-  async findByType(type) {
-    return await BLH.findAll({ where: { type: { [Op.iLike]: `%${type}%` } } });
+  async findByType(type, offset = 0, limit = 9) {
+    return await BLH.findAll({
+      where: { type: { [Op.iLike]: `%${type}%` } },
+      offset,
+      limit
+    });
   }
 
-  async findByCity(city) {
-    return await BLH.findAll({ where: { city: { [Op.iLike]: `%${city}%` } } });
+  async findByCity(city, offset = 0, limit = 9) {
+    return await BLH.findAll({
+      where: { city: { [Op.iLike]: `%${city}%` } },
+      offset,
+      limit
+    });
   }
-
 }
 
 module.exports = new BLHRepository();

@@ -3,7 +3,8 @@ const BLHService = require('../services/blhService');
 class BLHController {
   async getAll(req, res, next) {
     try {
-      const blhs = await BLHService.getAllBLHs();
+      const { page = 1, limit = 9 } = req.query;
+      const blhs = await BLHService.getAllBLHs(page, limit);
       res.json(blhs);
     } catch (error) {
       next(error);
@@ -13,7 +14,8 @@ class BLHController {
   async getByRegion(req, res, next) {
     try {
       const { region } = req.params;
-      const blhs = await BLHService.getBLHsByRegion(region);
+      const { page = 1, limit = 9 } = req.query;
+      const blhs = await BLHService.getBLHsByRegion(region, page, limit);
       if (blhs.length === 0) {
         return res.status(404).json({ error: 'Nenhum BLH encontrado para essa região' });
       }
@@ -26,7 +28,8 @@ class BLHController {
   async getByType(req, res, next) {
     try {
       const { type } = req.params;
-      const blhs = await BLHService.getBLHsByType(type);
+      const { page = 1, limit = 9 } = req.query;
+      const blhs = await BLHService.getBLHsByType(type, page, limit);
       if (blhs.length === 0) {
         return res.status(404).json({ error: 'Nenhum BLH encontrado para esse tipo' });
       }
@@ -39,7 +42,8 @@ class BLHController {
   async getByCity(req, res, next) {
     try {
       const { city } = req.params;
-      const blhs = await BLHService.getBLHsByCity(city);
+      const { page = 1, limit = 9 } = req.query;
+      const blhs = await BLHService.getBLHsByCity(city, page, limit);
       if (blhs.length === 0) {
         return res.status(404).json({ error: 'Nenhum BLH encontrado para essa cidade' });
       }
